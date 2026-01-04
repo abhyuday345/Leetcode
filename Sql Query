@@ -2,3 +2,8 @@
 
 select product_id from products
 where low_fats = 'Y' and recyclable = 'Y';
+
+584. Find Customer Referee
+
+select product_id from products
+where low_fats = 'Y' and recyclable = 'Y';
