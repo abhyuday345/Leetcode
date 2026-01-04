@@ -26,3 +26,7 @@ order by author_id;
 SELECT tweet_id
 FROM Tweets
 WHERE LENGTH(content) > 15;
+
+1378. Replace Employee Id with new identifier
+
+select unique_id,name from employees left join employeeuni on employees.id = employeeuni.id;
