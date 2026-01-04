@@ -21,3 +21,8 @@ select distinct(author_id) as 'id' from views
 where author_id = viewer_id
 order by author_id;
 
+1683.Invalid Tweets
+
+SELECT tweet_id
+FROM tweets
+WHERE content REGEXP '[^A-Za-z0-9 ]';
