@@ -30,3 +30,8 @@ WHERE LENGTH(content) > 15;
 1378. Replace Employee Id with new identifier
 
 select unique_id,name from employees left join employeeuni on employees.id = employeeuni.id;
+
+1068. Product Sales Analysis I
+
+select product_name,year,price from sales s join 
+product p on s.product_id = p.product_id;
