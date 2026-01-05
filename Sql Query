@@ -35,3 +35,10 @@ select unique_id,name from employees left join employeeuni on employees.id = emp
 
 select product_name,year,price from sales s join 
 product p on s.product_id = p.product_id;
+
+1581. Customers who visited but did not make any transactions
+
+select customer_id,count(*) as count_no_trans from visits v left join transactions t
+on v.visit_id = t.visit_id
+where transaction_id is null
+group by customer_id;
