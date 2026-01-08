@@ -127,3 +127,8 @@ LEFT JOIN Confirmations c
 ON s.user_id = c.user_id
 GROUP BY s.user_id;
 
+620.Not Boring Movies 
+
+select * from cinema
+where description != 'boring' and MOD(id, 2) = 1
+order by rating desc;
