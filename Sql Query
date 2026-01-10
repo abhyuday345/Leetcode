@@ -263,4 +263,9 @@ JOIN (
 ON s.product_id = t.product_id
 AND s.year = t.first_year;
 
+596.Classes with at Least 5 Students
 
+select class
+from courses
+group by class
+having count(*)>=5;
