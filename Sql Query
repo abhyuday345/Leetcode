@@ -322,4 +322,15 @@ FROM (
 ) t
 WHERE primary_flag = 'Y' OR dept_count = 1;       
 
+601. Triangle Judgement
+
+SELECT *,
+       CASE
+           WHEN (x + y) > z
+            AND (x + z) > y
+            AND (y + z) > x
+           THEN 'Yes'
+           ELSE 'No'
+       END AS triangle
+FROM triangle;
 
