@@ -369,3 +369,19 @@ LEFT JOIN (
     WHERE rn = 1
 ) t
 ON p.product_id = t.product_id;
+
+1204.Last Person to fit in the bus
+
+SELECT person_name
+FROM (
+    SELECT
+        turn,
+        person_id AS id,
+        person_name,
+        weight,
+        SUM(weight) OVER (ORDER BY turn) AS total_weight
+    FROM queue
+) t
+WHERE total_weight <= 1000
+ORDER BY turn DESC
+LIMIT 1;
