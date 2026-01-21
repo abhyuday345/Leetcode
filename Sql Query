@@ -603,7 +603,11 @@ group by product_name
 having sum(unit)>=100
 ;
 
+1517. Find Users With Valid E-Mails
 
-
+SELECT *
+FROM Users
+WHERE mail COLLATE utf8mb3_bin
+REGEXP '^[A-Za-z][A-Za-z0-9_.-]*@leetcode\\.com$';
 
 
