@@ -616,3 +616,9 @@ REGEXP '^[A-Za-z][A-Za-z0-9_.-]*@leetcode\\.com$';
 SELECT score,
        DENSE_RANK() OVER (ORDER BY score DESC) AS rank
 FROM scores;
+
+181. Employee Earning More than their managers
+
+select e.name as 'Employee' from employee e 
+join employee m on e.managerid = m.id
+where e.salary > m.salary;
