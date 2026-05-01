@@ -622,3 +622,9 @@ FROM scores;
 select e.name as 'Employee' from employee e 
 join employee m on e.managerid = m.id
 where e.salary > m.salary;
+
+182. Duplicate Email
+
+select email from Person
+group by email
+having count(*) > 1;
